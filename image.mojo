@@ -2,6 +2,7 @@ from primitives import Vec3f
 from python import Python
 from python.object import PythonObject
 
+
 struct Image:
     # reference count used to make the object efficiently copyable
     var rc: Pointer[Int]
@@ -89,7 +90,6 @@ struct Image:
                     )
 
         return np_image
-
 
     def render(self: Image):
         np = Python.import_module("numpy")

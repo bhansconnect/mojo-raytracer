@@ -8,6 +8,7 @@ from time import time_function
 from hitable import HitRecord, Hitable, Sphere, hit_any
 from material import Material, MaterialKind
 
+
 fn color(
     ray: Ray, world: List[Sphere], materials: List[Material], inout rng: Pcg32
 ) -> Vec3f:

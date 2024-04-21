@@ -1,6 +1,7 @@
 from math import sqrt
 from primitives import Vec3f, Ray
 
+
 @value
 @register_passable("trivial")
 struct HitRecord:
@@ -91,5 +92,3 @@ fn hit_any(
             closest_yet = tmp_rec.t
             rec = tmp_rec
     return hit_anything
-
-

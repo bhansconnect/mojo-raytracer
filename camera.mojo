@@ -1,8 +1,9 @@
 from math import tan
 from pcg import Pcg32
-from primitives import Vec3f, Ray,random_in_unit_sphere
+from primitives import Vec3f, Ray, random_in_unit_sphere
 
 var pi: Float32 = 3.14159265358979323846264338327950288
+
 
 @value
 struct Camera(Stringable):
@@ -66,5 +67,3 @@ struct Camera(Stringable):
             + str(self.origin)
             + ")"
         )
-
-
