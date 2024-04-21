@@ -1,11 +1,10 @@
 from algorithm import parallelize
-from math import sqrt, rsqrt, pow, tan
 from pcg import Pcg32
-from primitives import Vec3f, Ray, random_in_unit_disk, random_in_unit_sphere
+from primitives import Vec3f, Ray
 from camera import Camera
 from image import Image
 from time import time_function
-from hitable import HitRecord, Hitable, Sphere, hit_any
+from hittable import HitRecord, Sphere, hit_any
 from material import Material, MaterialKind
 
 

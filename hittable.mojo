@@ -24,7 +24,7 @@ struct HitRecord:
         )
 
 
-trait Hitable:
+trait Hittable:
     fn hit(
         self, ray: Ray, t_min: Float32, t_max: Float32, inout rec: HitRecord
     ) -> Bool:
@@ -33,7 +33,7 @@ trait Hitable:
 
 @value
 @register_passable("trivial")
-struct Sphere(Hitable, Stringable):
+struct Sphere(Hittable, Stringable):
     var center: Vec3f
     var radius: Float32
     var material_index: Int
@@ -77,7 +77,7 @@ struct Sphere(Hitable, Stringable):
 
 fn hit_any(
     ray: Ray,
-    # TODO: can mojo make this a dynamic list of Hitables?
+    # TODO: can mojo make this a dynamic list of Hittables?
     world: List[Sphere],
     t_min: Float32,
     t_max: Float32,

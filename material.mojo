@@ -1,7 +1,7 @@
 from math import sqrt, pow, rsqrt
 from primitives import Vec3f, Ray, random_in_unit_sphere
 from pcg import Pcg32
-from hitable import HitRecord
+from hittable import HitRecord
 
 
 @value
