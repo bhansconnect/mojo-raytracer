@@ -3,6 +3,7 @@ from primitives import Vec3f, Ray, random_in_unit_sphere
 from pcg import Pcg32
 from hitable import HitRecord
 
+
 @value
 @register_passable("trivial")
 struct MaterialKind(Stringable):
@@ -120,5 +121,3 @@ struct Material(Stringable):
             return True
         else:
             return abort[Bool]("Unreachable: unknown MaterialKind")
-
-

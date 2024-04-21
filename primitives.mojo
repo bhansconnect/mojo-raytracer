@@ -1,6 +1,7 @@
 from math import rsqrt, sqrt
 from pcg import Pcg32
 
+
 @register_passable("trivial")
 struct Vec3f(Stringable):
     var data: SIMD[DType.float32, 4]
@@ -135,5 +136,3 @@ fn random_in_unit_sphere(inout pcg: Pcg32) -> Vec3f:
             - Vec3f.one()
         )
     return p
-
-
